@@ -95,7 +95,7 @@ Now i can view my permission
 powTwoRight.permission(); // 69728 - it is my 'january', 'february', 'december', 'august' from config list
 ```
 
-And if necessary i can my access to some permission
+And if necessary i can test my access to some permission
 
 ```
 powTwoRight.test('january'); // true
