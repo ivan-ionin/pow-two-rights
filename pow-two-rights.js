@@ -46,6 +46,11 @@ let PowerOfTwo = function(list, configuration) {
     return res;
   };
   
+  // View permission
+  this.permission = function() {
+    return permission;
+  };
+  
   // Test injection
   this.test = function(p) {
     if (typeof p == 'string') {

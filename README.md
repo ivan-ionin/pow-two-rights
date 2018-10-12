@@ -1,16 +1,23 @@
 # pow-two-rights
+
 Rights by power of two
 
 ### Installation
-npm install pow-two-rights
+
+```
+$ npm install pow-two-rights
+```
 
 ### Theory
+
 By CRUD
 
+```
 Math.pow(2, 1); // 2 = create
 Math.pow(2, 2); // 4 = read
 Math.pow(2, 3); // 8 = update
 Math.pow(2, 4); // 16 = delete
+```
 
 Now i want set next right: "create", "read" and "update", but not "delete"
 
@@ -33,5 +40,67 @@ May i use permission "delete"? Permission "delete" it is - 16
 ### Usage
 
 ```
+let powTwoRightLib = require('pow-two-rights');
+
+let powTwoRight = new powTwoRightLib();
 
 ```
+
+CRUD it is base lib config:
+* pow 1 (num 2) - create
+* pow 2 (num 4) - read
+* pow 3 (num 8) - update
+* pow 4 (num 16) - delete
+
+I can redefine config
+
+```
+let powTwoRight = new powTwoRightLib([
+  // Redefine base permission (first four)
+  'select',
+  'insert',
+  'update',
+  'delete',
+  // And add other my sweet permission
+  'january',
+  'february',
+  'march',
+  'april',
+  'may',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december'
+]);
+```
+
+Now i generate permission for some user (rabbit (cat (or other)))
+I like only winter months and august
+
+```
+powTwoRight.generate([
+  'january',
+  'february',
+  'december',
+  'august'
+]);
+```
+
+Now i can view my permission
+
+```
+powTwoRight.permission(); // 69728 - it is my 'january', 'february', 'december', 'august' from config list
+```
+
+And if necessary i can my access to some permission
+
+```
+powTwoRight.test('january'); // true
+powTwoRight.test('select'); // false
+powTwoRight.test('june'); // false
+```
+
+The End :)
