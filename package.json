@@ -1,0 +1,22 @@
+{
+  "name": "pow-two-rights",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivan-ionin/pow-two-rights.git"
+  },
+  "author": "Ivan S. Ionin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivan-ionin/pow-two-rights/issues"
+  },
+  "homepage": "https://github.com/ivan-ionin/pow-two-rights#readme",
+  "dependencies": {
+    "extend": "^3.0.2"
+  }
+}
